@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.values {
+    padding: 30px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.values .val-box {
+    background: #fff;
+    width: 235px;
+    padding: 16px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.values .val-box .icons {
+    width: 60px; 
+    height: 60px;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.values .val-box:nth-child(1) .icons {
+    background: #7b74ec;
+}
+.values .val-box:nth-child(2) .icons {
+    background: #5c8af0;
+}
+.values .val-box:nth-child(3) .icons {
+    background: #e45d99;
+}
+.values .val-box:nth-child(4) .icons {
+    background: #74daec;
+}
+.values .val-box h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.values .val-box span {
+    font-size: 15px;
+    color: #828997;
+}
+.board {
+    width: 94%;
+    margin: 30px 0 30px 30px;
+    overflow: auto;
+    background: #fff;
+    border-radius: 8px;
+}
+.board img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.board h5 {
+    font-weight: 600;
+    font-size: 14px;
+}
+.board p {
+    font-weight: 400;
+    font-size: 13px;
+    color: #787d8d;
+}
+.board .people {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+table {
+    border-collapse: collapse;
+}
+tr {
+    border-bottom: 1px solid #eef0f3;
+}
+thead td {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: #f9fafb;
+    padding: 15px;
+}
+tbody tr td {
+    padding: 10px 15px;
+}
+.active p {
+    background: #d7fada;
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 40px;
+    color: #2b2b2b;
+}
+.edit a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #554cd1;
+    font-weight: 600;
+}
+.form {
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+}
+.email {
+    width: 330px;
+}
+.email1 {
+    width: 280px;
+}
+.form input, select {
+    margin: 15px 0;
+    padding: 5px 10px;
+    border: 1px solid rgb(241, 40, 181);
+    outline: none;
+}
+.form .email1, .select {
+    margin: 15px 0;
+    padding: 5px 10px;
+    border: 1px solid #b2744c;
+    outline: none;
+}
+.form input::placeholder {
+    color: #413c3c;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.form textarea::placeholder {
+    color: #413c3c;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.form textarea {
+    border: 1px solid rgb(84,40,241);
+    outline: none;
+}
+.form .btn .brown {
+    padding: 10px 30px;
+    font-size: 1.0rem;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(246, 50, 6);
+    transition: 0.3s ease;
+}
+.form .btn .brown:hover {
+    color: rgb(21, 21, 100);
+    background-color: #fff;
+}
+.service-form {
+    margin-top: 10vmin;
+}
+
+/*iPad*/
+@media (max-width: 769px) {
+    #menu {
+        width: 270px;
+        left: -270px;
+        transition: 0.3s ease;
+    }
+    #menu.active {
+        left: 0px;
+    }
+    #menu-btn {
+        display: block;
+    }
+    #interface {
+        width: 100%;
+        margin-left: 0;
+        display: inline-block;
+        transition: 0.3s ease;
+    }
+    #menu.active~ #interface {
+        width: calc(100% - 270px);
+        margin-left: 270px;
+        transition: 0.3s ease;
+    }
+    #interface .navigation {
+        width: 100%;
+    } 
+    .values {
+        padding: 30px 30px 0 30px;
+        justify-content: flex-start;
+    }
+    .values .val-box {
+        padding: 16px 20px;
+        margin: 10px 50px 10px 0;
+    }
+    .board {
+        width: 92%;
+        padding: 0;
+        overflow-x: auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+}
+
+@media (max-width: 477px) {
+    
+    #interface .navigation {
+        padding: 10px;
+    }
+    #interface .navigation .search input {
+        width: 140px;
+    }
+    .i-name {
+        padding: 15px 15px 0 15px;
+    }
+    .values {
+        padding: 15px 15px 0 15px;
+    }
+    .values .val-box {
+        width: 100%;
+        margin: 8px 0;
+    }
+    .board {
+        margin: 30px 15px 30px 15px;
+    }
+}
