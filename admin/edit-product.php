@@ -85,13 +85,13 @@ require_once '../functions/myfunctions.php';
                         <textarea rows="3" name="description" required placeholder="Enter Description" class="form-control"><?= $data['description']; ?></textarea>
                     </div>
                     <div class="col-md-6">
+                        <label>Discount Price</label>
+                        <input type="text" name="selling_price" value="<?= $data['selling_price']; ?>" required placeholder="Enter Discount Price" class="form-control">
+                        </div>
+                    <div class="col-md-6">
                         <label>Original Price</label>
                         <input type="text" name="original_price" value="<?= $data['original_price']; ?>" required placeholder="Enter Original Price" class="form-control">
                     </div>
-                    <div class="col-md-6">
-                        <label>Selling Price</label>
-                        <input type="text" name="selling_price" value="<?= $data['selling_price']; ?>" required placeholder="Enter Selling Price" class="form-control">
-                        </div>
                     <div class="col-md-12">
                         <label>Upload Image</label>
                         <input type="hidden" name="old_image" value="<?= $data['image']; ?>">

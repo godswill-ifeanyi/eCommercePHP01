@@ -35,6 +35,13 @@ require_once './functions/frontfunctions.php';
     <!-- this is icons link -->
 </head>
 
+<style>
+  /*trending*/
+  .card > .card-body {
+    height: 200px;
+    margin-bottom: 40px;
+  }
+</style>
 <body>
     <div class="all-content">
 
@@ -170,7 +177,7 @@ require_once './functions/frontfunctions.php';
                                                     <a href="product-view.php?product=<?= $item['id']; ?>" class="text-decoration-none">
                                                     <div class="card" style="box-shadow: 5px 5px 10px black">
                                                         <div class="card-body">
-                                                            <img src="./uploads/<?= $item['image']; ?>" alt="Product Image" class="w-100">
+                                                            <img src="./uploads/<?= $item['image']; ?>" alt="Product Image" class="h-100 w-100">
                                                             <h6 class="text-center text-black"><?= $item['name']; ?></h6>
                                                         </div>
                                                         
@@ -275,27 +282,23 @@ require_once './functions/frontfunctions.php';
                                 <figure class="product-media">
                                     
                                     <a href="javascript:;">
-                                        <img src="./uploads/<?= $item['image']; ?>" alt="Product image" class=" w-100 product-image">
+                                        <img src="./uploads/<?= $item['image']; ?>"  alt="Product image" class="h-100 w-100 product-image">
                                     </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="wishlist.php" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
 
                                     
                                <div class="product-action">
-                                    <a href="product-view.php?product=<?= $item['id']; ?>" class="btn bg-black"><span class="text-white">Cart</span></a>
+                                    <a href="cart.php" class="btn bg-black"><span class="text-white">Cart</span></a>
                                         
                                     <a href="checkout.php" class="btn bx bi-cash-coin" title="Buy" style="background-color: #b2744c; color: green;"><span style="color: #fff;font-weight: bold;">BUY</span></a><br><br>
                               </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
-                                <div class="product-body">
+                                <div class="product-body ">
                                    
                                     <h3 class="product-title fs-6"><?= $item['name']; ?></h3><!-- End .product-title -->
                                     <div class="product-price">
-                                        <span class="new-price"><span style="color: green;font-weight: bold">&#8358;</span><?= $item['selling_price']; ?></span>
-                                        <span class="old-price">was <span style="color: green;font-weight: bold">&#8358;</span><?= $item['original_price']; ?></span>
+                                        <span class="new-price fs-5"><span style="color: green;font-weight: bold">&#8358;</span><?= $item['original_price']; ?></span>
+                                        <span class="old-price">was <span style="color: green;font-weight: bold">&#8358;</span><span style='color: red;'><?= $item['selling_price']; ?></span></span></span>
                                     </div><!-- End .product-price -->
                                     
                                     <div class="star text-center">
@@ -369,7 +372,7 @@ require_once './functions/frontfunctions.php';
             <h6 class="new-price"><span style="color: green;font-weight: bold">&#8358;
           </span><?= $item['selling_price']; ?></h6>
             </div>
-            <div>
+            <div style="margin-bottom: 10px;">
               <button onclick="window.location.href='cart.php'" class="btn bg-black text-white">Cart</button>
               <button onclick="window.location.href='checkout.php'" class="btn text-white" style="background-color: #b2744c">Buy</button>
             </div>

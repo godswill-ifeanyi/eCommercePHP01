@@ -18,6 +18,7 @@
     .reminder .time {
         flex-wrap: wrap;
       }
+      
 }
 
 .special-offer {
@@ -126,11 +127,6 @@ html ::-webkit-scrollbar{
     color: white;
 }
 /* home section end */
-
-
-
-
-
 
 
 
@@ -305,6 +301,10 @@ html ::-webkit-scrollbar{
     float: right;
     cursor: pointer;
 }
+.product > .product-media {
+    height: 230px;
+    margin-bottom: 40px;
+  }
 /* product section end */
 
 
@@ -418,6 +418,9 @@ html ::-webkit-scrollbar{
     #contact input{
         width: 250px;
     }
+    .product > .product-media {
+        height: 150px;
+        }
 }
 /* contact end */
 

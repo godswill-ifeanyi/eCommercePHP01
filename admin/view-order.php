@@ -92,7 +92,7 @@ if (isset($_GET['t'])) {
                                                 <tr>
                                                     <th>Product</th>
                                                     <th>Price</th>
-                                                    <th>Quantity</th>
+                                                    <th>Qty</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -116,7 +116,7 @@ if (isset($_GET['t'])) {
                                                     </td>
                                                     <td class="align-middle">
                                                     x<?= $item['orderqty']; ?>
-                                                    </td>
+                                                    </td>   
                                                 </tr>
                                                 <?php
                                                 }

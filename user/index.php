@@ -45,6 +45,14 @@ require_once '../functions/userfunctions.php';
     <!-- this is icons link -->
 </head>
 
+<style>
+  /*trending*/
+  .card > .card-body {
+    height: 200px;
+    margin-bottom: 40px;
+  }
+</style>
+
 <body>
     <div class="all-content">
 
@@ -183,7 +191,7 @@ require_once '../functions/userfunctions.php';
                                                     <a href="product-view.php?product=<?= $item['id']; ?>" class="text-decoration-none">
                                                     <div class="card" style="box-shadow: 5px 5px 10px black">
                                                         <div class="card-body">
-                                                            <img src="../uploads/<?= $item['image']; ?>" alt="Product Image" class="w-100">
+                                                            <img src="../uploads/<?= $item['image']; ?>" alt="Product Image" class="h-100 w-100">
                                                             <h6 class="text-center text-black"><?= $item['name']; ?></h6>
                                                         </div>
                                                         
@@ -262,7 +270,7 @@ require_once '../functions/userfunctions.php';
         </section>
         <!-- top card end -->
 
-        <div class="container for-you my-5" id="product">
+            <div class="container for-you my-5" id="product">
                 <div class="heading heading-flex mb-3">
                 <div class="container">
             <div class="heading3">Products</div>
@@ -286,22 +294,25 @@ require_once '../functions/userfunctions.php';
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="product product-2">
                                 <figure class="product-media">
+                                    
                                     <a href="javascript:;">
-                                        <img src="../uploads/<?= $item['image']; ?>" alt="Product image" class=" w-100 product-image">
+                                        <img src="../uploads/<?= $item['image']; ?>"  alt="Product image" class="h-100 w-100 product-image">
                                     </a>
 
                                     
                                <div class="product-action">
-                                        <a href="../includes/wishlist.php?id=<?= $item['id']; ?>" class="btn bg-black"><span class="text-white"><img src="../icons/heart-regular1.svg" width="20px"></span></a>
+                               <a href="../includes/wishlist.php?id=<?= $item['id']; ?>" class="btn bg-black"><span class="text-white"><img src="../icons/heart-regular1.svg" width="20px"></span></a>
                                         
                                         <a href="product-view.php?product=<?= $item['id']; ?>" class="btn bx bi-cash-coin" title="Buy" style="background-color: #b2744c; color: green;"><span style="color: #fff;font-weight: bold;">BUY</span></a><br><br>
+                                                              </div><!-- End .product-action -->
+                                </figure><!-- End .product-media -->
 
-                                        <div class="product-body">
+                                <div class="product-body ">
                                    
                                     <h3 class="product-title fs-6"><?= $item['name']; ?></h3><!-- End .product-title -->
                                     <div class="product-price">
-                                        <span class="new-price"><span style="color: green;font-weight: bold">&#8358;</span><?= $item['selling_price']; ?></span>
-                                        <span class="old-price">was <span style="color: green;font-weight: bold">&#8358;</span><?= $item['original_price']; ?></span>
+                                        <span class="new-price fs-5"><span style="color: green;font-weight: bold">&#8358;</span><?= $item['original_price']; ?></span>
+                                        <span class="old-price">was <span style="color: green;font-weight: bold">&#8358;</span><span style='color: red;'><?= $item['selling_price']; ?></span></span></span>
                                     </div><!-- End .product-price -->
                                     
                                     <div class="star text-center">
@@ -312,12 +323,7 @@ require_once '../functions/userfunctions.php';
                                       <i class="fa-regular fa-star"></i>
                                     </div><!-- End .rating-container -->
 
-                                </div>
-                                        
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <!-- End .product-body -->
+                                </div><!-- End .product-body -->
                             </div><!-- End .product -->
                         </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
                         <?php
@@ -370,7 +376,7 @@ require_once '../functions/userfunctions.php';
           
           <div class="col-md-6 py-3 py-md-0">
             <div class="card " style="position: relative">
-              <img src="../uploads/<?= $item['image']; ?>" width="80%" alt="">
+              <img src="./uploads/<?= $item['image']; ?>" width="80%" alt="">
               <span style="position: absolute; top: 10px; right: 10px; width: 100px; height: 30px; background-color: rgb(240, 53, 53); color: white; border-radius: 10px;">
                 Special Offer
               </span>
@@ -380,9 +386,9 @@ require_once '../functions/userfunctions.php';
             <h6 class="new-price"><span style="color: green;font-weight: bold">&#8358;
           </span><?= $item['selling_price']; ?></h6>
             </div>
-            <div>
-            <a href="../includes/wishlist.php?id=<?= $item['id']; ?>" class="btn bg-black"><span class="text-white"><img src="../icons/heart-regular1.svg" width="20px"></span></a>
-              <button onclick="window.location.href='product-view.php?product=<?= $item['id']; ?>'" class="btn text-white" style="background-color: #b2744c">Buy</button>
+            <div style="margin-bottom: 10px;">
+              <button onclick="window.location.href='cart.php'" class="btn bg-black text-white">Cart</button>
+              <button onclick="window.location.href='checkout.php'" class="btn text-white" style="background-color: #b2744c">Buy</button>
             </div>
           </div>
           <?php

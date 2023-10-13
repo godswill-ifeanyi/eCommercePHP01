@@ -1,9 +1,9 @@
 <?php
 
 $dbHost = "localhost";
-$dbUser = "u112713895_ecommerce";
-$dbPass = "##Pass22word##";
-$dbName = "u112713895_ecommerce";
+$dbUser = "root";
+$dbPass = "";
+$dbName = "ecomm";
 
 $conn = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
 

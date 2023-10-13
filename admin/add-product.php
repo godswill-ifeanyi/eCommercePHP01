@@ -75,12 +75,12 @@ require_once '../functions/myfunctions.php';
                         <textarea rows="3" name="description" required placeholder="Enter Description" class="form-control"></textarea>
                     </div>
                     <div class="col-md-6">
-                        <label>Original Price</label>
-                        <input type="text" name="original_price" required placeholder="Enter Original Price" class="form-control">
+                        <label>Discount Price</label>
+                        <input type="text" name="selling_price" required placeholder="Enter Discount Price" class="form-control">
                     </div>
                     <div class="col-md-6">
-                        <label>Selling Price</label>
-                        <input type="text" name="selling_price" required placeholder="Enter Selling Price" class="form-control">
+                        <label>Original Price</label>
+                        <input type="text" name="original_price" required placeholder="Enter Original Price" class="form-control">
                     </div>
                     <div class="col-md-12">
                         <label>Upload Image</label>

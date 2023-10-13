@@ -141,9 +141,6 @@ if (isset($_GET['product'])){
                                     <div class="col-md-6">
                                         <h5 class=" fs-3"><span style="color: green;font-weight: bold">&#8358;</span><span class="text-black"><?= $product['selling_price']; ?></span></h5>
                                     </div>
-                                    <div class="col-md-6">
-                                        <h5><span style="color: green;font-weight: bold">&#8358;</span><s class="text-danger"><?= $product['original_price']; ?></s></h5>
-                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
@@ -157,6 +154,9 @@ if (isset($_GET['product'])){
                                 <div class="row mt-3">
                                     <div class="col-md-6">
                                         <button class="btn text-white addToCartBtn px-4" style="background-color: #b2744c"  value="<?= $product['id']; ?>"><img src="../icons/cart-shopping-solid1.svg" width="20px">Add to Cart</button>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                    <button class="btn text-white buyNowBtn px-4" style="background-color: black; float: right; font-weight: bold;"  value="<?= $product['id']; ?>">BUY NOW</button>
                                     </div>
                                     <div class="col-md-6 mt-3">
                                     <button class="btn btn-danger px-4" onclick="window.location.href='../includes/wishlist.php?id=<?= $product['id']; ?>'"><img src="../icons/heart-regular1.svg" width="20px">Add to Wishlist</a></button>

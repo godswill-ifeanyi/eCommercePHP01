@@ -123,7 +123,7 @@ require_once 'authenticate.php';
             <table width="100%">
                 <thead>
                     <th>ID</th>
-                    <th>Tracking No</th>
+                    <th>Tracking No</th> 
                     <th>Price</th>
                     <th>Date</th>
                     <th></th>

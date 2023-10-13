@@ -36,8 +36,8 @@ require_once '../functions/myfunctions.php';
                         </div>
                     <div class="row"> 
                     <div class="col-md-6">
-                        <label>Selling Price</label>
-                        <input type="number" name="selling_price" required placeholder="Enter Selling Price" class="form-control">
+                        <label>Discount Price</label>
+                        <input type="number" name="selling_price" required placeholder="Enter Discount Price" class="form-control">
                     </div>
                         <div class="col-md-6">
                             <label>Original Price</label>
